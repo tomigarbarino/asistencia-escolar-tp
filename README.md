@@ -22,20 +22,6 @@ Permitir que preceptores o docentes registren la asistencia diaria de alumnos, c
 5. Guardar asistencia.
 6. Consultar reporte del curso.
 
-## Tickets publicos
-
-El trabajo esta bajado a issues del repositorio:
-
-- #1 Inicializar repositorio y estructura del proyecto.
-- #2 Configurar MySQL dockerizado y phpMyAdmin.
-- #3 Crear schema SQL y datos iniciales.
-- #4 Implementar backend Express y conexion a MySQL.
-- #5 Crear endpoints de cursos, alumnos y asistencia.
-- #6 Crear carga de justificativos.
-- #7 Crear reportes de asistencia.
-- #8 Construir frontend de presentacion.
-- #9 Preparar QA y guion de presentacion.
-
 ## Ejecucion local
 
 Requisitos:
