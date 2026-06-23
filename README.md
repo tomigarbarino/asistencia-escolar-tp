@@ -11,7 +11,7 @@ Permitir que preceptores o docentes registren la asistencia diaria de alumnos, c
 - Backend: Node.js + Express.
 - Base de datos: MySQL en Docker.
 - Administracion de base: phpMyAdmin.
-- Frontend: React/Vite en una etapa posterior.
+- Frontend: React/Vite.
 
 ## Flujo de demo
 
@@ -68,6 +68,19 @@ Arquitectura recomendada:
 ```txt
 Frontend en Vercel -> Backend Express en Railway -> MySQL en Railway
 ```
+
+Alternativa si Railway no esta disponible:
+
+```txt
+Frontend en Vercel -> Backend Express en Northflank -> MySQL en Northflank
+```
+
+Northflank permite crear un servicio Node/Express y un addon MySQL en el mismo proyecto. Para este repo se mantiene el mismo backend y solo hay que configurar las variables `DB_HOST`, `DB_PORT`, `DB_NAME`, `DB_USER` y `DB_PASSWORD` con los datos del addon MySQL.
+
+Referencias:
+
+- Node/Express en Northflank: https://northflank.com/stacks/deploy-node-express
+- MySQL en Northflank: https://northflank.com/docs/v1/application/databases-and-persistence/deploy-databases-on-northflank/deploy-mysql-on-northflank
 
 Backend en Railway:
 

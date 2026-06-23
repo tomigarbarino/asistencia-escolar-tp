@@ -251,6 +251,11 @@ function App() {
           <div>
             <p>Registro diario</p>
             <h1>Sistema de Asistencia Escolar</h1>
+            <div className="context-line">
+              <span>{curso ? `${curso.anio}° ${curso.division} - ${curso.turno}` : "Curso sin seleccionar"}</span>
+              <span>{fecha}</span>
+              <span>{health?.database === "ok" ? "API online" : "API pendiente"}</span>
+            </div>
           </div>
           <div className="user-chip">
             <GraduationCap size={18} />
@@ -346,6 +351,10 @@ function App() {
                   <p>Resumen</p>
                   <h2>Totales del dia</h2>
                 </div>
+              </div>
+              <div className="summary-total">
+                <span>Alumnos en lista</span>
+                <strong>{alumnos.length}</strong>
               </div>
               <div className="stats">
                 {totals.map((item) => (
