@@ -46,6 +46,7 @@ URLs esperadas:
 - Backend: http://localhost:3000
 - Healthcheck: http://localhost:3000/api/health
 - phpMyAdmin: http://localhost:8080
+- Frontend: http://localhost:5173
 
 ## API inicial
 
@@ -59,6 +60,28 @@ La API permite probar el flujo principal antes de construir el frontend:
 - Reportes por curso y alumno.
 
 Ver ejemplos en `docs/api-ejemplos.md`.
+
+## Demo tipo produccion
+
+Arquitectura recomendada:
+
+```txt
+Frontend en Vercel -> Backend Express en Railway -> MySQL en Railway
+```
+
+Backend en Railway:
+
+- Root directory: `backend`
+- Start command: `npm start`
+- Healthcheck: `/api/health`
+- Variables de base soportadas: `MYSQLHOST`, `MYSQLPORT`, `MYSQLDATABASE`, `MYSQLUSER`, `MYSQLPASSWORD`
+
+Frontend en Vercel:
+
+- Root directory: `frontend`
+- Build command: `npm run build`
+- Output directory: `dist`
+- Variable requerida: `VITE_API_URL=https://url-del-backend`
 
 ## Alcance
 
