@@ -38,6 +38,11 @@ El trabajo esta bajado a issues del repositorio:
 
 ## Ejecucion local
 
+Requisitos:
+
+- Node.js 20 o superior.
+- Docker Desktop o Docker Engine con Compose.
+
 Copiar el archivo de entorno de ejemplo:
 
 ```bash
@@ -55,6 +60,19 @@ URLs esperadas:
 - Backend: http://localhost:3000
 - Healthcheck: http://localhost:3000/api/health
 - phpMyAdmin: http://localhost:8080
+
+## API inicial
+
+La API permite probar el flujo principal antes de construir el frontend:
+
+- Login demo.
+- Consulta de cursos.
+- Consulta de alumnos por curso.
+- Registro de asistencia por curso y fecha.
+- Carga de justificativos.
+- Reportes por curso y alumno.
+
+Ver ejemplos en `docs/api-ejemplos.md`.
 
 ## Alcance
 

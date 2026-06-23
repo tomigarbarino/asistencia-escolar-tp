@@ -33,5 +33,23 @@ services:
     ports:
       - "8080:80"
 
+  backend:
+    build:
+      context: ./backend
+    container_name: asistencia_backend
+    restart: unless-stopped
+    depends_on:
+      mysql:
+        condition: service_healthy
+    environment:
+      PORT: ${BACKEND_PORT:-3000}
+      DB_HOST: mysql
+      DB_PORT: 3306
+      DB_NAME: ${MYSQL_DATABASE:-asistencia_escolar}
+      DB_USER: ${MYSQL_USER:-asistencia_user}
+      DB_PASSWORD: ${MYSQL_PASSWORD:-asistencia_pass}
+    ports:
+      - "${BACKEND_PORT:-3000}:3000"
+
 volumes:
   asistencia_mysql_data:
